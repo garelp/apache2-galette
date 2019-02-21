@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Pierre Garel <garelp@toplite.org>
 
-LABEL version="1.1.4"
+LABEL version="1.1.5"
 LABEL description="Apache 2 / PHP / Galette"
 
 RUN apt-get -y update && apt-get install -y \
@@ -20,7 +20,7 @@ php-mbstring \
 mcrypt \
 wget
 
-ENV GALETTE_VERSION 0.9.1.2
+ENV GALETTE_VERSION 0.9.2.1
 
 RUN cd /usr/src; wget http://download.tuxfamily.org/galette/galette-${GALETTE_VERSION}.tar.bz2
 RUN cd /usr/src; tar jxvf galette-${GALETTE_VERSION}.tar.bz2; mv galette-${GALETTE_VERSION}/galette . ; rm galette-${GALETTE_VERSION}.tar.bz2
